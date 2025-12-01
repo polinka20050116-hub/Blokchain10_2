@@ -1,7 +1,13 @@
 const contractAddress = '0xBf9C427B23FC14a3Dd0680BF0432F23aD11d6dbb';
 const contractAbi = [
     {
-        "inputs": [{"internalType": "string","name": "_message","type": "string"}],
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_message",
+                "type": "string"
+            }
+        ],
         "name": "setMessage",
         "outputs": [],
         "stateMutability": "nonpayable",
@@ -10,12 +16,19 @@ const contractAbi = [
     {
         "inputs": [],
         "name": "getMessage",
-        "outputs": [{"internalType": "string","name": "","type": "string"}],
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
         "stateMutability": "view",
         "type": "function"
     }
 ];
 
+// При подключении к MetaMask
 if (window.ethereum) {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
